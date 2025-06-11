@@ -1,1 +1,22 @@
-@import "tailwindcss";
+@import "tailwindcss/preflight";
+@tailwind utilities;
+
+:root {
+  /* Light theme */
+  --ext-primary: #ff6b00;
+  --ext-bg: #ffffff;
+  --ext-text: #333333;
+  --ext-border: #e2e8f0;
+  --ext-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  --ext-hover: #ff8533;
+}
+
+[data-theme="dark"] {
+  /* Dark theme */
+  --ext-primary: #ff8533;
+  --ext-bg: #1a1a1a;
+  --ext-text: #ffffff;
+  --ext-border: #2d2d2d;
+  --ext-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+  --ext-hover: #ff6b00;
+}

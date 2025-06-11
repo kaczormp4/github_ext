@@ -1,10 +1,10 @@
-import { StrictMode } from "react";
-import { createRoot } from "react-dom/client";
+import ReactDOM from "react-dom/client";
 import "./index.css";
-import App from "./App.tsx";
 
-createRoot(document.getElementById("root")!).render(
-  <StrictMode>
-    <App />
-  </StrictMode>
+const App = () => (
+  <div className="text-blue-500">Hello single-bundle world!</div>
 );
+
+const root = document.createElement("div");
+document.body.appendChild(root);
+ReactDOM.createRoot(root).render(<App />);
